@@ -1,0 +1,10 @@
+# Python files
+.venv/
+
+
+# IDE files
+.idea
+.vscode
+
+# experiments
+area51/

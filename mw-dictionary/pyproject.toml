@@ -1,0 +1,52 @@
+[project]
+name = "MW Dictionary"
+version = "0.1.0"
+description = "Simple application that searches for a word in Merriam-Webster Collegiate Dictionary and returns the definitions."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Flet developer", email = "you@example.com" }
+]
+dependencies = [
+    "flet==0.80.0",
+    "requests==2.32.5",
+    "python-dotenv==1.2.1",
+]
+
+[dependency-groups]
+dev = [
+    "flet[all]>=0.80.0",
+]
+
+[tool.flet]
+org = "com.mycompany"
+product = "mw-dictionary"
+company = "Flet"
+copyright = "Copyright (C) 2026 by Flet"
+
+[tool.flet.app]
+path = "src"
+
+[tool.flet.splash]
+color = "#FFFF00" # --splash-color
+dark_color = "#8B8000" # --splash-dark-color
+web = false # --no-web-splash
+ios = false # --no-ios-splash
+android = false # --no-android-splash
+
+[tool.flet.android]
+split_per_abi = false
+
+[tool.flet.android.permission] # --android-permissions
+"android.permission.CAMERA" = false
+"android.permission.ACCESS_FINE_LOCATION" = false
+"android.permission.ACCESS_COARSE_LOCATION" = false
+"android.permission.ACCESS_BACKGROUND_LOCATION" = false
+"android.permission.RECORD_AUDIO" = false
+"android.permission.WRITE_EXTERNAL_STORAGE" = false
+"android.permission.READ_EXTERNAL_STORAGE" = false
+
+[tool.flet.android.feature] # --android-features
+"android.hardware.camera" = false
+"android.hardware.location.network" = false
+"android.hardware.location.gps" = false
